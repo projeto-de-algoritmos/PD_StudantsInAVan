@@ -5,22 +5,22 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
+import AddSchool from '../Screens/AddSchool';
 
-const Stack = createStackNavigator();
 
 export default function Routes() {
-
+  
+  const Stack = createStackNavigator();
   const ref = React.useRef(null);
 
   return (
-    <View style={styles.container}>
     <NavigationContainer ref={ref}>
       <Stack.Navigator initialRouteName='Home'>
         <Stack.Screen name ="Home" component={Home}/>
-        <Stack.Screen name ="FindWay" component={FindWay}/>
+        <Stack.Screen name ="Rotas" component={FindWay}/>
+        <Stack.Screen name ="Nova escola" component={AddSchool}/>
       </Stack.Navigator>
     </NavigationContainer>
-    </View>
   );
 }
 

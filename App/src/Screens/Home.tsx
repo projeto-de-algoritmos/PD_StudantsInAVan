@@ -1,10 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
-
-
-var school = [];
-
+import { StyleSheet, Text, View, TextInput, Button, SafeAreaView, useWindowDimensions } from 'react-native';
 
 export default function Home({navigation}) {
     
@@ -18,42 +14,27 @@ export default function Home({navigation}) {
   
     return (
 
-    <View style={styles.container}>
-      <Text>Adicione sua escola</Text>
-      
-      <TextInput
-        style={styles.input}
-        onChangeText={setSchoolName}
-        value={schoolName}
-        placeholder="Colégio"
-        keyboardType="default"
-      />
-      <Text>Adicione o número de alunos do colégio</Text>
-      
-      <TextInput
-        style={styles.input}
-        onChangeText={setKidsNumber}
-        value={kidsNumber}
-        placeholder="Alunos"
-        keyboardType="decimal-pad"
-    />
-
-        <Button
-        onPress={() => addSchool(schoolName,kidsNumber)}
-        title="Adicionar colégio"
-        color="#841584"
-        //accessibilityLabel="Learn more about this purple button"
-        />
-
-      {/*<TextInput
-        style={styles.input}
-        onChangeText={onChangeNumber}
-        value={number}
-        placeholder="useless placeholder"
-        keyboardType="numeric"
-    />*/}
+    <SafeAreaView style={styles.container}>
+      <View>
+        <View style={{margin: 10}}>
+            <Button
+            onPress={() => navigation.navigate("Nova escola")}
+            title="Adicionar colégio"
+            color="#841584"
+            //accessibilityLabel="Learn more about this purple button"
+            />
+          </View>
+          <View>
+            <Button
+            onPress={() => navigation.navigate("Rotas")}
+            title="Ver viagens"
+            color="#841584"
+            //accessibilityLabel="Learn more about this purple button"
+            />
+          </View>
+      </View>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
