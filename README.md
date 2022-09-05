@@ -9,12 +9,11 @@
 | 180022237  |  Liverson Paulo Furtado Severo |
 
 ## Sobre 
-O projeto tem como objetivo resolver alguns problemas de programação utilizando conhecimentos do módulo de programação dinâmica e suas aplicações.
-
+O projeto tem como objetivo resolver alguns problemas de programação utilizando conhecimentos do módulo de programação dinâmica. O problema consiste em utilizar o algoritmo da mochila em uma solução que permite organizar a ordem das escolas, baseado na quantidade de alunos. No projeto final da disciplina, o que foi desenvolvido nesse módulo será incrementado com outros métodos e algoritmos para realizar a busca de um aluno nessa base de escolas de forma mais eficiente.
 
 ## Instalação 
-**Linguagens**:  
-**Pré-requsitos**: 
+**Linguagens**: Typescript 
+**Pré-requsitos**: Expo App
 
 ## Uso
 
