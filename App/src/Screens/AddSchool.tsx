@@ -2,17 +2,21 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button, SafeAreaView } from 'react-native';
 
+import { RootState } from '../app/store';
+import { addSchool } from '../app/feat/SchoolSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
-
-var school = [];
+var schools = [];
 
 export default function AddSchool({navigation}) {
+  const dispatch = useDispatch();
+  var school = useSelector((state:RootState) => state.School.schools);
     
     const [kidsNumber, setKidsNumber] = React.useState(null);
     const [schoolName, setSchoolName] = React.useState('');
     
-    function verifyList(schoolName){
-        if(school.find((currSchool)=> schoolName  == currSchool[0]) == undefined){
+    function verifyList(schoolName){ 
+      if(schools.find((currSchool)=> schoolName  == currSchool[0]) == undefined){
             return false;
         }
         return true;
@@ -20,10 +24,11 @@ export default function AddSchool({navigation}) {
 
     function addSchool(schoolName, kidsNumber){
         if(!verifyList(schoolName)){
-            school.push([schoolName,Number(kidsNumber)]);
+          schools.push([schoolName,Number(kidsNumber)]);
+          console.log(schools);
         }
         console.log(school);
-    }
+      }
   
     return (
 

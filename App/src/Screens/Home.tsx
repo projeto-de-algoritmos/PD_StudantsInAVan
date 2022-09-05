@@ -3,14 +3,6 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button, SafeAreaView, useWindowDimensions } from 'react-native';
 
 export default function Home({navigation}) {
-    
-    const [kidsNumber, setKidsNumber] = React.useState(null);
-    const [schoolName, setSchoolName] = React.useState('');
-    
-    function addSchool(schoolName, kidsNumber){
-        school.push([schoolName,kidsNumber]);
-        console.log(school);
-    }
   
     return (
 

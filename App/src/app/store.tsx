@@ -1,6 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import School from './feat/SchoolSlice'
-// ...
+import SchoolReducer from './feat/SchoolSlice'
 
 export const store = configureStore({
   reducer: {

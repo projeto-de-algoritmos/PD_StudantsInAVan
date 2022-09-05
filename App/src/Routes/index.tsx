@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import Home from '../Screens/Home';
-import FindWay from '../Screens/Findway';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
+
+import Home from '../Screens/Home';
+import FindWay from '../Screens/Findway';
 import AddSchool from '../Screens/AddSchool';
 
 
