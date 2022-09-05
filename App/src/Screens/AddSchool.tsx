@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, SafeAreaView, Alert } from 'react-native';
 
 import { RootState } from '../app/store';
 import { addSchool } from '../app/feat/SchoolSlice';
@@ -10,24 +10,26 @@ var schools = [];
 
 export default function AddSchool({navigation}) {
   const dispatch = useDispatch();
-  var school = useSelector((state:RootState) => state.School.schools);
+  var schools = useSelector((state:RootState) => state.School);
     
     const [kidsNumber, setKidsNumber] = React.useState(null);
     const [schoolName, setSchoolName] = React.useState('');
     
     function verifyList(schoolName){ 
       if(schools.find((currSchool)=> schoolName  == currSchool[0]) == undefined){
-            return false;
-        }
-        return true;
+          return false;
+      }
+      return true;
     }
 
-    function addSchool(schoolName, kidsNumber){
+    function newSchool(schoolName, kidsNumber){
         if(!verifyList(schoolName)){
-          schools.push([schoolName,Number(kidsNumber)]);
-          console.log(schools);
+          dispatch(addSchool([schoolName,Number(kidsNumber)]));
+          Alert.alert("Colégio adicionado.");
         }
-        console.log(school);
+        else{
+          Alert.alert("Colégio já foi adicionado anteriormente");
+        }
       }
   
     return (
@@ -53,7 +55,7 @@ export default function AddSchool({navigation}) {
     />
 
         <Button
-        onPress={() => addSchool(schoolName,kidsNumber)}
+        onPress={() => newSchool(schoolName,kidsNumber)}
         title="Adicionar colégio"
         color="#841584"
         //accessibilityLabel="Learn more about this purple button"

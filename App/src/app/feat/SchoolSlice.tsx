@@ -1,14 +1,15 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { State } from "react-native-gesture-handler";
 
 const SchoolSlice = createSlice({
     name: 'School',
-    initialState:{
-        schools: [],
-    },
+    initialState:[],
+    //initialState:{schools : []},
 
     reducers:{
-        addSchool: (state, action: PayloadAction <[]>) => {
-            state.schools = action.payload;
+        addSchool:(state, action) => {
+            state.push(action.payload);
+            //state.schools.push(action.payload);
         },
     },
 })
