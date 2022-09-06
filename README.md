@@ -12,8 +12,8 @@
 O projeto tem como objetivo resolver alguns problemas de programação utilizando conhecimentos do módulo de programação dinâmica. O problema consiste em utilizar o algoritmo da mochila em uma solução que permite organizar a ordem das escolas, baseado na quantidade de alunos. No projeto final da disciplina, o que foi desenvolvido nesse módulo será incrementado com outros métodos e algoritmos para realizar a busca de um aluno nessa base de escolas de forma mais eficiente.
 
 ## Instalação 
-**Linguagens**: Typescript 
-**Pré-requsitos**: npm, yarn, expo-cli, Expo GO
+**Linguagens**: Typescript    
+**Pré-requsitos**: npm, yarn, expo-cli, Expo GO    
 
 ## Uso
 
@@ -37,6 +37,6 @@ expo start
 ### 6 - Teste o app pelo aplicativo Expo Go
 
 ## Apresentação
-Disponível no repositório em [vídeo](xxxxx.mp4)
+Disponível no repositório em [vídeo](presentation.mp4)
 
 ## Outros 
