@@ -11,21 +11,26 @@ export default function FindWayScreen({navigation}) {
   var capacity = 15;
   var n = qtdStudents.length;
   var result;
+  var temp = 0;
 
   function knapsack(n,capacity,qtdStudents){
+    console.log(temp);
     if(n==0 || capacity == 0){
       return 0;
     }
     if(qtdStudents[n-1] > capacity){
-      return knapsack(n-1, capacity, qtdStudents);
+      temp = knapsack(n-1, capacity, qtdStudents);
+      return temp;
     }
     else{
-      return Math.max(qtdStudents[n-1] + knapsack(n-1,capacity-qtdStudents[n-1], qtdStudents), knapsack(n-1,capacity-qtdStudents[n-1], qtdStudents));
+      temp = Math.max(qtdStudents[n-1] + knapsack(n-1,capacity-qtdStudents[n-1], qtdStudents), knapsack(n-1,capacity-qtdStudents[n-1], qtdStudents));
+      return temp;
     }
   }
 
   function alertResult(){
-    result = result = knapsack(n, capacity, qtdStudents);
+    console.log(qtdStudents[2]);
+    result = knapsack(n, capacity, qtdStudents);
     //console.log(result.toString());
     Alert.alert("Quantidade de alunos: " + result.toString());
   }
@@ -38,7 +43,7 @@ export default function FindWayScreen({navigation}) {
 
         <Button
         onPress={() => alertResult()}
-        title="to na outra tela"
+        title="Mostrar Máximo de alunos"
         color="#841584"
         //accessibilityLabel="Learn more about this purple button"
         />
