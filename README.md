@@ -13,23 +13,28 @@ O projeto tem como objetivo resolver alguns problemas de programação utilizand
 
 ## Instalação 
 **Linguagens**: Typescript 
-**Pré-requsitos**: Expo App
+**Pré-requsitos**: npm, yarn, expo-cli, Expo GO
 
 ## Uso
-
 
 ### 1 - Clone o repositório
 ```
 git clone https://github.com/projeto-de-algoritmos/PD_StudantsInAVan
 ```
-### 2 - 
+### 2 - Entre na pasta onde o App foi criado
 ```
-cd 
+cd App
 ```
-### 3 - 
+### 3 - Instale o expo-cli utilizando o yarn
 ```
-cd 
+yarn add expo-cli
 ```
+### 4 - Inicie a aplicação utilizando o expo
+```
+expo start
+```
+### 5 - Escaneie o QR Code fornecido 
+### 6 - Teste o app pelo aplicativo Expo Go
 
 ## Apresentação
 Disponível no repositório em [vídeo](xxxxx.mp4)
