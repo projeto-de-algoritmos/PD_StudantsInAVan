@@ -6,8 +6,6 @@ import { RootState } from '../app/store';
 import { addSchool } from '../app/feat/SchoolSlice';
 import { useDispatch, useSelector } from 'react-redux';
 
-var schools = [];
-
 export default function AddSchool({navigation}) {
   const dispatch = useDispatch();
   var schools = useSelector((state:RootState) => state.School);
